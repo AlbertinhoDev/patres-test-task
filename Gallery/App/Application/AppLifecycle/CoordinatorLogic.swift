@@ -1,0 +1,3 @@
+protocol CoordinatorLogic {
+    func start()
+}
