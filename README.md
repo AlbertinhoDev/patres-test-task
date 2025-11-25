@@ -1,31 +1,31 @@
 iOS-приложение Swift 5.9+ (iOS 18.6) с бесконечной лентой постов, пагинацией, двойным тапом для лайка, полным оффлайн-режимом и автоматическим кэшированием данных и лайков при уходе приложения в фон.
 
-MainViewController – View, отвечает только за UI и делегирует всю логику презентеру
-MainPresenter – вся бизнес-логика экрана: загрузка, пагинация, оффлайн-режим, сохранение лайков, кэширование при уходе в фон
+MainViewController – View, отвечает только за UI и делегирует всю логику презентеру.
+MainPresenter – вся бизнес-логика экрана: загрузка, пагинация, оффлайн-режим, сохранение лайков, кэширование при уходе в фон.
 
-Архитектура: SOLID + Clean Architecture + Coordinator + MVP+R
-Асинхронность: async/await, withTaskGroup
-Сеть: URLSession
-Хранилище: Core Data + кастомный маппер
-DI: Ручная инъекция + собственный DiContainer
-Навигация: Coordinator Pattern (AppCoordinator, MainFlowCoordinator)
-UI: UIKit (программная вёрстка), UITableView, UIRefreshControl, анимации
+Архитектура: SOLID + Clean Architecture + Coordinator + MVP+R.
+Асинхронность: async/await, withTaskGroup.
+Сеть: URLSession.
+Хранилище: Core Data + кастомный маппер.
+DI: Ручная инъекция + собственный DiContainer.
+Навигация: Coordinator Pattern (AppCoordinator, MainFlowCoordinator).
+UI: UIKit (программная вёрстка), UITableView, UIRefreshControl, анимации.
 
 Особенности:
-Бесконечная пагинация (по 10 постов со fake-данными jsonplaceholder + picsum.photos)
-Полный оффлайн-режим: посты и лайки сохраняются локально
-Два способа поставить лайк: кнопка и двойной тап по ячейке
-Автоматическое сохранение всех данных при уходе приложения в фон
-Pull-to-refresh
-Плавно появляющаяся кнопка «Наверх» с пружинной анимацией
-Параллельная загрузка изображений через withTaskGroup(of:)
-Кастомные ячейки с адаптивной вёрсткой через UIStackView
+Бесконечная пагинация (по 10 постов со fake-данными jsonplaceholder + picsum.photos).
+Полный оффлайн-режим: посты и лайки сохраняются локально.
+Два способа поставить лайк: кнопка и двойной тап по ячейке.
+Автоматическое сохранение всех данных при уходе приложения в фон.
+Pull-to-refresh.
+Плавно появляющаяся кнопка «Наверх» с пружинной анимацией.
+Параллельная загрузка изображений через withTaskGroup(of:).
+Кастомные ячейки с адаптивной вёрсткой через UIStackView.
 
 Сервисы:
-Network - сервис для работы с api-запросами
-NetworkMonitor - сервис для проверки наличия интернет соединения
-Storage - сервис для работы с кэш данными
-Decoder - универсальный сервис для декодирования данных с применением дженерика
-Endpoint - сборка маршрута для api-запроса
+Network - сервис для работы с api-запросами.
+NetworkMonitor - сервис для проверки наличия интернет соединения.
+Storage - сервис для работы с кэш данными.
+Decoder - универсальный сервис для декодирования данных с применением дженерика.
+Endpoint - сборка маршрута для api-запроса.
 
-<img width="1179" height="2556" alt="Simulator Screenshot - iPhone 16 (18 6 ver) - 2025-11-24 at 16 27 44" src="https://github.com/user-attachments/assets/b4c5442f-5d98-499f-adc1-ba52d4e74d12" />
+<img width="294" height="640" alt="Simulator Screenshot - iPhone 16 (18 6 ver) - 2025-11-24 at 16 27 44" src="https://github.com/user-attachments/assets/b4c5442f-5d98-499f-adc1-ba52d4e74d12" />
